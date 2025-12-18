@@ -1,0 +1,25 @@
+[package]
+name = "virtual-mic"
+version = "0.1.0"
+edition = "2021"
+description = "Virtual microphone that pipes audio files to PipeWire"
+
+[dependencies]
+# PipeWire native bindings
+pipewire = "0.8"
+
+# Audio decoding (supports mp3, wav, flac, ogg, aac)
+symphonia = { version = "0.5", features = ["all"] }
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Error handling
+anyhow = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Signal handling
+ctrlc = "3.4"
