@@ -61,6 +61,22 @@ virtual-mic -f audio.mp3 -m
 3. Uses PipeWire to stream decoded audio to the null-sink
 4. Applications see the remap-source as a standard microphone input
 
+## Audio Setup on Arch Linux
+
+Once the virtual microphone is running, you need to configure your applications to use it.
+
+### Verifying the Virtual Microphone
+
+You can verify the virtual microphone is working using `pavucontrol` (PulseAudio Volume Control). The VirtualMic_player should appear in the Playback tab:
+
+![pavucontrol showing VirtualMic_player](audio-settings.png)
+
+### Selecting the Virtual Microphone in Applications
+
+In your video conferencing or voice chat application, select "VirtualMic" as the microphone input. Here's an example from Daily.co:
+
+![Daily.co audio settings showing VirtualMic options](daily-settings.png)
+
 ## License
 
 MIT
